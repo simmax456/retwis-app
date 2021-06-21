@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Retwis Homepage</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,400;0,600;1,200;1,400&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+     <div class="container">
+        <header>
+            <a>
+                <img id="headerlogo" src="https://go-retwis.herokuapp.com/static/image/logo.png" alt="Retwis logo">
+            </a>
+
+            <nav id="navbar">
+                <ul>
+                    <li>
+                        <a href="index.html">home</a> | 
+                    </li>
+                    <li>
+                        <a href="timeline.html">timeline</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <div class="clr"></div>
+        <hr>
+
+        <div id="mainbody">
+            <main>
+                <p>Hello! Retwis is a very simpe clone of 
+                <a href="https://twitter.com" target="_blank">Twitter</a>, as a demo for the 
+                <a href="https://code.google.com/archive/p/redis/" target="_blank">Redis</a> 
+                key-value database. Key points:</p>
+                
+                <ul>
+                    <li>
+                    Redis is a key-value DB, and it is <strong>the only DB used</strong> by this application, no MySQL or alike at all.</li>
+                    <li>
+                    This application can scale horizontally since there is no point where the whole dataset is needed at the same point. With consistent hashing (not implented in the demo to make it simpler) different keys can be stored in different servers.</li>
+                    <li>
+                    The source code of this application, and a tutorial explaining its design, is available <a href="https://code.google.com/archive/p/redis/wikis/TwitterAlikeExample.wiki" target="_blank">here</a></li>
+                    <li>
+                    PHP and the Redis server communicate using PHP Redis library client writtern by Ludovico Mangocavallo and included inside the Redis tar.gz distribution.</li>
+                </ul>
+            </main>
+        </div>
+        
+        <form id="registration" method="POST">
+            <h2>Register!</h2>
+            <h4>Want to try Retwis? Create an account!</h4>
+            <div>
+                <label>Username &emsp; &emsp;&emsp;&ensp;</label>
+                <input type="username" name="Username" placeholder="Enter Username"> 
+            </div>
+            
+            <div>
+                <label>Password &emsp;&emsp;&emsp;&emsp;</label>
+                <input type="password" name="Password" placeholder="Enter Password">
+            </div>
+            
+            <div>
+                <label>Confirm Password</label>
+                <input type="password" name="Confirm Password" placeholder="Enter Password Again">
+            </div>
+
+            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+            <input type="submit" name="submit" value="Create an account">
+        
+            <h2>Already registered? Login here</h2>
+            <div>
+                <label>Username &emsp;&emsp;&emsp;&ensp;</label>
+                <input type="username" name="Username" placeholder="Enter Username"> 
+            </div>
+            
+            <div>
+                <label>Password&emsp;&emsp;&emsp;&emsp;</label>
+                <input type="password" name="Confirm Password" placeholder="Enter Password">
+            </div>
+            
+            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+            <input type="submit" name="submit" value="Login">
+        </form>
+
+        <div class="clr"></div>
+
+        <footer>
+            <hr>
+            <p>Redis is a very simple Twitter clone written in PHP as example application of the <a href="https://redis.io/" target="_blank">Redis database</a></p>
+        </footer>
+     </div>
+    </body>
+</html>
